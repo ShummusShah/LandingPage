@@ -4,132 +4,197 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Biochemi — UK Research-Grade Peptide Supplier</title>
-<meta name="description" content="UK-based research peptide supplier. Independently batch-tested 99%+ purity. Complete Certificates of Analysis. Next-day delivery." />
+<meta name="description" content="Precision research-grade peptides for UK laboratories. High purity, batch-tested, clinically researched." />
 <style>
-  :root{
-    --gold:#b89968;
-    --teal:#2bbfae;
-    --navy:#0c2038;
-    --charcoal:#1a1a1a;
-    --bg:#fafaf8;
-    --white:#ffffff;
-    --text:#2a2a2a;
-    --muted:#666;
-    --border:#e5e5e5;
+  :root {
+    --navy: #1a2332;
+    --navy-light: #2a3a4a;
+    --teal: #2bbfae;
+    --teal-light: #4fd6c4;
+    --white: #ffffff;
+    --text: #333333;
+    --text-light: #666666;
+    --bg: #f5f5f5;
+    --black: #000000;
   }
 
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--text); line-height:1.6; background:var(--white); }
-  h1,h2,h3,h4,p { margin:0; }
-  a { color:inherit; text-decoration:none; }
-  img { max-width:100%; height:auto; display:block; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
+  h1, h2, h3, p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
 
-  .wrap { max-width:1200px; margin:0 auto; padding:0 40px; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 
   /* ===== HEADER ===== */
-  header { border-bottom:1px solid var(--border); padding:24px 0; position:sticky; top:0; background:var(--white); z-index:100; }
-  .header-wrap { display:flex; justify-content:space-between; align-items:center; }
-  .logo { font-weight:800; font-size:18px; letter-spacing:2px; color:var(--navy); }
-  nav { display:flex; gap:40px; }
-  nav a { font-size:14px; font-weight:500; color:var(--text); transition:color .2s; }
-  nav a:hover { color:var(--gold); }
+  header { background: var(--white); border-bottom: 1px solid #e5e5e5; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+  .header-wrap { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: 800; font-size: 20px; color: var(--navy); letter-spacing: 1px; }
+  nav { display: flex; gap: 40px; }
+  nav a { font-size: 14px; font-weight: 600; color: var(--navy); transition: color 0.2s; }
+  nav a:hover { color: var(--teal); }
 
-  @media (max-width:768px) { nav { display:none; } }
+  @media (max-width: 768px) {
+    nav { display: none; }
+  }
 
   /* ===== HERO ===== */
-  .hero { padding:100px 0; background:var(--white); }
-  .hero-wrap { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center; }
-  .hero-label { font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:20px; }
-  .hero h1 { font-size:56px; font-weight:800; line-height:1.15; margin-bottom:24px; color:var(--navy); }
-  .hero h1 .gold { color:var(--gold); }
-  .hero-desc { font-size:17px; color:var(--muted); margin-bottom:32px; line-height:1.8; }
-  .hero-ctas { display:flex; flex-direction:column; gap:14px; margin-bottom:28px; }
-  .btn { display:inline-flex; padding:14px 32px; border-radius:6px; font-weight:600; font-size:15px; text-align:center; cursor:pointer; transition:all .25s; border:none; }
-  .btn-primary { background:var(--gold); color:var(--charcoal); }
-  .btn-primary:hover { background:#d4af85; box-shadow:0 8px 20px rgba(184,153,104,0.3); }
-  .btn-outline { background:transparent; border:1.5px solid var(--navy); color:var(--navy); }
-  .btn-outline:hover { background:var(--navy); color:var(--white); }
-  .hero-legal { font-size:12px; color:var(--muted); font-style:italic; }
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(43, 191, 174, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .hero-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); font-weight: 700; margin-bottom: 20px; opacity: 0.9; }
+  .hero h1 { font-size: 56px; font-weight: 800; line-height: 1.15; margin-bottom: 24px; }
+  .hero-desc { font-size: 18px; opacity: 0.95; margin-bottom: 32px; line-height: 1.7; }
+  .hero-tags { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+  .tag { border: 1.5px solid var(--teal); color: var(--teal); padding: 8px 14px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+  .hero-ctas { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; max-width: 300px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .btn-primary { background: var(--black); color: var(--white); }
+  .btn-primary:hover { background: var(--navy); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); }
+  .btn-outline { background: transparent; border: 2px solid var(--white); color: var(--white); }
+  .btn-outline:hover { background: var(--white); color: var(--navy); }
+  .hero-legal { font-size: 12px; opacity: 0.8; font-style: italic; }
 
-  .hero-image { position:relative; background:linear-gradient(135deg, #f5f0ea 0%, #ede6df 100%); border-radius:12px; display:flex; align-items:center; justify-content:center; min-height:500px; }
-  .hero-badge { position:absolute; top:24px; right:24px; background:var(--gold); color:var(--charcoal); padding:10px 16px; border-radius:6px; font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; }
-  .hero-image img { max-height:100%; width:auto; padding:40px; }
+  .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    position: relative;
+  }
+  .hero-image img {
+    max-height: 100%;
+    width: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  }
+  .hero-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--teal);
+    color: var(--navy);
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
   /* ===== RANGE ===== */
-  .range { padding:80px 0; background:var(--bg); text-align:center; }
-  .range-content { max-width:600px; margin:0 auto; }
-  .range h2 { font-size:42px; font-weight:800; margin-bottom:20px; color:var(--navy); }
-  .range p { font-size:16px; color:var(--muted); margin-bottom:28px; line-height:1.8; }
-  .trust-box { display:inline-block; border:1px solid var(--border); padding:20px 28px; border-radius:8px; background:var(--white); font-size:14px; font-weight:600; color:var(--text); }
-  .trust-box span { color:var(--gold); }
+  .range { padding: 80px 0; background: var(--bg); text-align: center; }
+  .range-label { color: var(--teal); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  .range h2 { font-size: 42px; font-weight: 800; margin-bottom: 20px; color: var(--navy); }
+  .range p { font-size: 16px; color: var(--text-light); margin-bottom: 28px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+  .trust-box { display: inline-block; border: 1px solid #ddd; padding: 20px 28px; border-radius: 4px; background: var(--white); font-size: 14px; font-weight: 700; color: var(--text); }
+  .trust-box span { color: var(--teal); }
 
   /* ===== MATERIALS ===== */
-  .materials { padding:100px 0; background:var(--white); }
-  .materials-wrap { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:center; }
-  .materials h2 { font-size:42px; font-weight:800; margin-bottom:24px; color:var(--navy); line-height:1.2; }
-  .materials h2 .gold { color:var(--gold); }
-  .materials p { font-size:15px; color:var(--muted); margin-bottom:18px; line-height:1.8; }
-  .materials-list { margin:32px 0; }
-  .materials-list li { font-size:14px; color:var(--text); margin-bottom:12px; display:flex; gap:10px; }
-  .materials-list li::before { content:"✦"; color:var(--gold); font-weight:700; flex-shrink:0; }
-  .materials-link { display:inline-flex; gap:8px; color:var(--navy); font-weight:700; font-size:14px; margin-top:8px; }
-  .materials-link::after { content:"→"; }
-  .materials-link:hover { color:var(--gold); }
+  .materials { padding: 100px 0; background: var(--white); }
+  .materials-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .materials h2 { font-size: 42px; font-weight: 800; margin-bottom: 24px; color: var(--navy); line-height: 1.2; }
+  .materials h2 .teal { color: var(--teal); }
+  .materials p { font-size: 15px; color: var(--text-light); margin-bottom: 18px; line-height: 1.8; }
+  .materials-list { margin: 32px 0; }
+  .materials-list li { font-size: 14px; color: var(--text); margin-bottom: 12px; display: flex; gap: 10px; }
+  .materials-list li::before { content: '✦'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+  .materials-link { display: inline-flex; gap: 8px; color: var(--navy); font-weight: 700; font-size: 14px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .materials-link::after { content: '→'; }
+  .materials-link:hover { color: var(--teal); }
 
-  .materials-img { background:linear-gradient(135deg, #f5f0ea 0%, #ede6df 100%); border-radius:12px; display:flex; align-items:center; justify-content:center; min-height:450px; }
-  .materials-img img { max-height:100%; width:auto; padding:40px; }
+  .materials-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; }
+  .materials-img img { max-height: 100%; width: auto; }
 
   /* ===== WHY ===== */
-  .why { padding:100px 0; background:var(--bg); }
-  .why h2 { text-align:center; font-size:42px; font-weight:800; margin-bottom:60px; color:var(--navy); }
-  .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; }
-  .why-card { background:var(--white); padding:40px; border-radius:8px; border:1px solid var(--border); }
-  .why-card h3 { font-size:18px; font-weight:700; color:var(--navy); margin-bottom:14px; }
-  .why-card p { font-size:14px; color:var(--muted); line-height:1.7; }
+  .why { padding: 100px 0; background: var(--bg); }
+  .why h2 { text-align: center; font-size: 42px; font-weight: 800; margin-bottom: 60px; color: var(--navy); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .why-card { background: var(--white); padding: 40px; border-radius: 8px; border: 1px solid #e5e5e5; }
+  .why-card h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 14px; }
+  .why-card p { font-size: 14px; color: var(--text-light); line-height: 1.7; }
 
   /* ===== ABOUT ===== */
-  .about { padding:100px 0; background:var(--white); }
-  .about-wrap { display:grid; grid-template-columns:1fr 1.1fr; gap:80px; align-items:start; }
-  .about h2 { font-size:42px; font-weight:800; margin-bottom:24px; color:var(--navy); line-height:1.2; }
-  .about h2 .gold { color:var(--gold); }
-  .about p { font-size:15px; color:var(--muted); margin-bottom:18px; line-height:1.8; }
-  .about-list { margin:32px 0; }
-  .about-list li { font-size:14px; color:var(--text); margin-bottom:12px; display:flex; gap:10px; }
-  .about-list li::before { content:"✦"; color:var(--gold); font-weight:700; flex-shrink:0; }
-  .about-link { display:inline-flex; gap:8px; color:var(--navy); font-weight:700; font-size:14px; margin-top:8px; }
-  .about-link::after { content:"→"; }
-  .about-link:hover { color:var(--gold); }
+  .about { padding: 100px 0; background: var(--white); }
+  .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .about h2 { font-size: 42px; font-weight: 800; margin-bottom: 24px; color: var(--navy); line-height: 1.2; }
+  .about h2 .teal { color: var(--teal); }
+  .about p { font-size: 15px; color: var(--text-light); margin-bottom: 18px; line-height: 1.8; }
+  .about-list { margin: 32px 0; }
+  .about-list li { font-size: 14px; color: var(--text); margin-bottom: 12px; display: flex; gap: 10px; }
+  .about-list li::before { content: '✦'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+  .about-link { display: inline-flex; gap: 8px; color: var(--navy); font-weight: 700; font-size: 14px; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .about-link::after { content: '→'; }
+  .about-link:hover { color: var(--teal); }
 
-  .about-img { background:linear-gradient(135deg, #f5f0ea 0%, #ede6df 100%); border-radius:12px; display:flex; align-items:center; justify-content:center; min-height:450px; }
-  .about-img img { max-height:100%; width:auto; padding:40px; }
+  .about-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; }
+  .about-img img { max-height: 100%; width: auto; }
 
   /* ===== STATS ===== */
-  .stats { padding:100px 0; background:linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%); color:var(--white); text-align:center; }
-  .stats h2 { font-size:42px; font-weight:800; margin-bottom:16px; }
-  .stats p { font-size:16px; color:#ccc; margin-bottom:48px; }
-  .stats-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:40px; margin-bottom:48px; }
-  .stat { }
-  .stat-value { font-size:40px; font-weight:800; color:var(--gold); margin-bottom:6px; }
-  .stat-label { font-size:13px; color:#aaa; }
-  .stats .btn { background:var(--gold); color:var(--charcoal); margin:0 auto; }
-  .stats .btn:hover { background:#d4af85; }
-  .stats-legal { margin-top:28px; font-size:12px; color:#666; font-style:italic; }
+  .stats {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+  }
+  .stats h2 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
+  .stats p { font-size: 16px; opacity: 0.9; margin-bottom: 48px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 48px; }
+  .stat-value { font-size: 40px; font-weight: 800; color: var(--teal); margin-bottom: 6px; }
+  .stat-label { font-size: 13px; opacity: 0.8; }
+  .stats .btn { background: var(--teal); color: var(--navy); margin: 0 auto; }
+  .stats .btn:hover { background: var(--teal-light); }
+  .stats-legal { margin-top: 28px; font-size: 12px; opacity: 0.7; font-style: italic; }
 
   /* ===== FOOTER ===== */
-  footer { background:var(--navy); color:#999; padding:48px 0 24px; font-size:13px; border-top:1px solid var(--border); }
-  footer p { margin-bottom:6px; }
+  footer { background: var(--navy); color: rgba(255, 255, 255, 0.7); padding: 48px 0 24px; font-size: 13px; }
+  footer p { margin-bottom: 6px; }
 
   /* ===== RESPONSIVE ===== */
-  @media (max-width:900px) {
-    .wrap { padding:0 24px; }
-    .hero-wrap, .materials-wrap, .about-wrap { grid-template-columns:1fr; gap:40px; }
-    .hero h1 { font-size:40px; }
-    .materials h2, .about h2 { font-size:32px; }
-    .why-grid { grid-template-columns:1fr; }
-    .stats-grid { grid-template-columns:1fr; }
-    .hero-image, .materials-img, .about-img { min-height:300px; }
-    .hero-ctas { margin-bottom:20px; }
+  @media (max-width: 900px) {
+    .wrap { padding: 0 24px; }
+    .hero-wrap, .materials-wrap, .about-wrap { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 40px; }
+    .materials h2, .about h2, .why h2 { font-size: 32px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .hero-image, .materials-img, .about-img { min-height: 300px; }
   }
 </style>
 </head>
@@ -150,32 +215,32 @@
 <section class="hero">
   <div class="wrap hero-wrap">
     <div>
-      <span class="hero-label">UK-based research supplier</span>
-      <h1>Welcome to <span class="gold">Biochemi</span></h1>
-      <p class="hero-desc">Research-grade peptides with independently verified purity of 99%+. Complete batch documentation, fast UK delivery.</p>
+      <span class="hero-label">UK-based Research Supplier</span>
+      <h1>Precision Starts Here</h1>
+      <p class="hero-desc">High purity peptides for UK research laboratories. Independently batch-tested, clinically researched, results driven.</p>
+      <div class="hero-tags">
+        <span class="tag">Clinically Researched</span>
+        <span class="tag">Pharmaceutical Grade</span>
+        <span class="tag">Results Driven</span>
+      </div>
       <div class="hero-ctas">
-        <a href="https://www.biochemi.co.uk" class="btn btn-primary">Enter Biochemi →</a>
-        <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-outline">View All Products →</a>
+        <a href="https://www.biochemi.co.uk" class="btn btn-primary">Enter Biochemi</a>
+        <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-outline">View All Products</a>
       </div>
       <div class="hero-legal">For laboratory research use only. Not for human or animal consumption.</div>
     </div>
     <div class="hero-image">
       <span class="hero-badge">Research-Grade</span>
-      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:260px;height:auto;">
-        <rect fill="#f5f0ea" width="300" height="400"/>
-        <rect fill="#fff" x="50" y="60" width="200" height="280" rx="12" stroke="#b89968" stroke-width="2"/>
-        <circle cx="150" cy="120" r="40" fill="#2bbfae" opacity="0.15"/>
-        <rect x="110" y="180" width="80" height="100" fill="#2bbfae" opacity="0.2" rx="6"/>
-      </svg>
+      <img src="https://via.placeholder.com/300x450/1a2332/2bbfae?text=Biochemi+Products" alt="Biochemi Research Peptides" />
     </div>
   </div>
 </section>
 
 <section class="range" id="products">
-  <div class="wrap range-content">
-    <h2 style="color:#b89968;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">Our Range</h2>
+  <div class="wrap">
+    <span class="range-label">Our Range</span>
     <h2>We Take Pride in Our Work</h2>
-    <p>Every peptide in our catalogue is formulated for precision, consistency, and research-grade reliability — backed by rigorous quality control at every stage.</p>
+    <p>Every product in our catalogue is formulated for precision, consistency, and research-grade reliability — backed by rigorous quality control at every stage.</p>
     <div class="trust-box">✦ <span>UK-BASED • RESEARCH-FOCUSED</span> ✦</div>
   </div>
 </section>
@@ -183,7 +248,7 @@
 <section class="materials">
   <div class="wrap materials-wrap">
     <div>
-      <h2>Research-Grade Peptides For <span class="gold">Serious Scientists</span></h2>
+      <h2>Research-Grade Peptides For <span class="teal">Serious Scientists</span></h2>
       <p>Biochemi supplies research-grade peptides intended exclusively for laboratory, analytical, and in-vitro research applications. Designed to support academic and commercial research environments.</p>
       <p>All materials supplied strictly for non-clinical research use only and are not intended for human or animal application.</p>
       <ul class="materials-list">
@@ -194,14 +259,7 @@
       <a href="https://www.biochemi.co.uk/collections/all" class="materials-link">View Full Product Range</a>
     </div>
     <div class="materials-img">
-      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:auto;">
-        <rect fill="#ede6df" width="300" height="400"/>
-        <g opacity="0.2">
-          <circle cx="80" cy="180" r="35" fill="#2bbfae"/>
-          <rect x="130" y="140" width="50" height="140" fill="#2bbfae" rx="6"/>
-          <circle cx="220" cy="160" r="30" fill="#0c2038"/>
-        </g>
-      </svg>
+      <img src="https://via.placeholder.com/300x400/e8f0f5/2bbfae?text=Peptide+Vials" alt="Biochemi Peptide Products" />
     </div>
   </div>
 </section>
@@ -229,7 +287,7 @@
 <section class="about" id="about">
   <div class="wrap about-wrap">
     <div>
-      <h2>More Than a Decade of <span class="gold">Research Excellence</span></h2>
+      <h2>More Than a Decade of <span class="teal">Research Excellence</span></h2>
       <p>Our catalogue supports the full spectrum of research needs — from early-stage academic investigation through to commercial analytical workflows. We understand what researchers need because we work alongside them every day.</p>
       <p>All materials supplied strictly for non-clinical research use only and are not intended for human or animal application.</p>
       <ul class="about-list">
@@ -240,14 +298,7 @@
       <a href="https://www.biochemi.co.uk/pages/contact" class="about-link">Learn More</a>
     </div>
     <div class="about-img">
-      <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" style="width:200px;height:auto;">
-        <rect fill="#f5f0ea" width="300" height="400"/>
-        <g opacity="0.2">
-          <circle cx="100" cy="200" r="40" fill="#2bbfae"/>
-          <rect x="140" y="140" width="45" height="140" fill="#0c2038" rx="6"/>
-          <circle cx="220" cy="180" r="35" fill="#2bbfae"/>
-        </g>
-      </svg>
+      <img src="https://via.placeholder.com/300x400/e8f0f5/2bbfae?text=Lab+Research" alt="Biochemi Research Laboratory" />
     </div>
   </div>
 </section>
@@ -255,22 +306,22 @@
 <section class="stats">
   <div class="wrap">
     <h2>Trusted by Researchers Across the UK</h2>
-    <p>Independently batch-verified. SSL-secured. Over 1,000+ satisfied researchers trust Biochemi.</p>
+    <p>Independently batch-verified. SSL-secured. Over 1,000+ satisfied researchers.</p>
     <div class="stats-grid">
-      <div class="stat">
+      <div>
         <div class="stat-value">99%+</div>
         <div class="stat-label">Batch Purity Verified</div>
       </div>
-      <div class="stat">
+      <div>
         <div class="stat-value">24hr</div>
         <div class="stat-label">UK Delivery Available</div>
       </div>
-      <div class="stat">
+      <div>
         <div class="stat-value">1000+</div>
         <div class="stat-label">Satisfied Researchers</div>
       </div>
     </div>
-    <a href="https://www.biochemi.co.uk" class="btn btn-primary">Enter Biochemi →</a>
+    <a href="https://www.biochemi.co.uk" class="btn btn-primary">Enter Biochemi</a>
     <div class="stats-legal">For laboratory research use only. Not for human or animal consumption.</div>
   </div>
 </section>
