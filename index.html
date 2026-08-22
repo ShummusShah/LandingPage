@@ -96,16 +96,20 @@
     justify-content: center;
     min-height: 500px;
     position: relative;
+    background: radial-gradient(circle at 30% 30%, rgba(43, 191, 174, 0.05), transparent 70%);
+    border-radius: 8px;
   }
   .hero-image img {
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 480px;
     width: auto;
+    height: auto;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
   }
   .hero-badge {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 24px;
+    right: 24px;
     background: var(--teal);
     color: var(--navy);
     padding: 10px 16px;
@@ -114,6 +118,7 @@
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
+    z-index: 10;
   }
 
   /* ===== RANGE ===== */
@@ -137,8 +142,8 @@
   .materials-link::after { content: '→'; }
   .materials-link:hover { color: var(--teal); }
 
-  .materials-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; }
-  .materials-img img { max-height: 100%; width: auto; }
+  .materials-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; padding: 20px; }
+  .materials-img img { max-width: 100%; max-height: 420px; width: auto; height: auto; }
 
   /* ===== WHY ===== */
   .why { padding: 100px 0; background: var(--bg); }
@@ -161,8 +166,8 @@
   .about-link::after { content: '→'; }
   .about-link:hover { color: var(--teal); }
 
-  .about-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; }
-  .about-img img { max-height: 100%; width: auto; }
+  .about-img { display: flex; align-items: center; justify-content: center; min-height: 450px; background: linear-gradient(135deg, #f0f5f8 0%, #e8f0f5 100%); border-radius: 8px; padding: 20px; }
+  .about-img img { max-width: 100%; max-height: 420px; width: auto; height: auto; }
 
   /* ===== STATS ===== */
   .stats {
