@@ -3,501 +3,615 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Biochemi — Research-Grade Peptides, UK</title>
-<meta name="description" content="Quality-led research compounds, sourced with care and supplied with confidence. Batch-tested purity, full documentation, tracked UK delivery." />
+<title>Biochemi — UK Research-Grade Peptide Supplier</title>
+<meta name="description" content="UK-based research peptide supplier. Independently batch-tested 99%+ purity. Complete Certificates of Analysis. Next-day delivery." />
 <style>
   :root{
-    --navy-900:#0c2038;
-    --navy-800:#123253;
-    --navy-700:#183e66;
-    --teal-500:#2bbfae;
-    --teal-400:#4fd6c4;
-    --teal-050:#e8faf6;
-    --bg:#f5f8fb;
-    --card:#ffffff;
-    --text:#152233;
-    --muted:#5c6b7a;
-    --border:#e3eaf1;
-    --shadow:0 20px 40px -20px rgba(12,32,56,0.25);
-    --radius-lg:20px;
-    --radius-md:14px;
-    --radius-sm:10px;
-    --maxw:1180px;
+    --gold:#b89968;
+    --gold-light:#d4af85;
+    --charcoal:#2a2a2a;
+    --dark:#3d3d3d;
+    --light-bg:#f9f8f6;
+    --white:#ffffff;
+    --text:#333333;
+    --muted:#666666;
+    --border:#e8e8e8;
+    --shadow:0 4px 12px rgba(0,0,0,0.08);
   }
 
-  *,*::before,*::after{ box-sizing:border-box; }
-  html{ scroll-behavior:smooth; }
-  body{
-    margin:0;
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     color:var(--text);
-    background:var(--bg);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    background:var(--white);
   }
-  img{ max-width:100%; display:block; }
-  a{ color:inherit; text-decoration:none; }
-  ul{ list-style:none; margin:0; padding:0; }
-  h1,h2,h3,p{ margin:0; }
-  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
-  .eyebrow{
-    display:inline-flex; align-items:center; gap:8px;
-    font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--teal-500);
-  }
-  .eyebrow::before{
-    content:""; width:18px; height:2px; background:var(--teal-500); border-radius:2px;
-  }
-  .btn{
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:14px 26px; border-radius:999px; font-weight:700; font-size:15px;
-    border:2px solid transparent; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
-    white-space:nowrap;
-  }
-  .btn:hover{ transform:translateY(-2px); }
-  .btn-primary{ background:var(--teal-500); color:var(--navy-900); box-shadow:0 12px 24px -10px rgba(43,191,174,0.6); }
-  .btn-primary:hover{ background:var(--teal-400); }
-  .btn-outline{ border-color:rgba(255,255,255,0.35); color:#fff; }
-  .btn-outline:hover{ border-color:#fff; background:rgba(255,255,255,0.08); }
-  .btn-outline.on-light{ border-color:var(--navy-800); color:var(--navy-800); }
-  .btn-outline.on-light:hover{ background:var(--navy-800); color:#fff; }
 
-  /* ---------- Header ---------- */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:rgba(245,248,251,0.85);
-    backdrop-filter:blur(10px);
+  a { color:inherit; text-decoration:none; }
+  img { max-width:100%; display:block; }
+  .wrap { max-width:1200px; margin:0 auto; padding:0 40px; }
+
+  /* ========== Header ========== */
+  header {
     border-bottom:1px solid var(--border);
+    padding:20px 0;
+    position:sticky;
+    top:0;
+    background:var(--white);
+    z-index:50;
   }
-  .nav{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
-  .brand{ display:flex; align-items:center; gap:10px; font-weight:800; font-size:20px; color:var(--navy-900); }
-  .brand svg{ width:34px; height:34px; }
-  .nav-links{ display:flex; align-items:center; gap:34px; font-weight:600; font-size:15px; color:var(--navy-800); }
-  .nav-links a{ position:relative; padding:4px 0; }
-  .nav-links a::after{
-    content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:var(--teal-500);
-    transform:scaleX(0); transform-origin:left; transition:transform .2s ease;
+  .header-inner {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
   }
-  .nav-links a:hover::after{ transform:scaleX(1); }
-  .nav-cta{ display:flex; align-items:center; gap:18px; }
-  .nav-cta .btn{ padding:11px 22px; font-size:14px; }
-  .menu-btn{ display:none; background:none; border:0; cursor:pointer; padding:8px; }
-  .menu-btn span{ display:block; width:24px; height:2px; background:var(--navy-900); margin:5px 0; border-radius:2px; }
+  .logo {
+    font-weight:700;
+    font-size:16px;
+    color:var(--charcoal);
+    letter-spacing:2px;
+  }
+  nav {
+    display:flex;
+    gap:32px;
+    font-size:14px;
+  }
+  nav a {
+    color:var(--text);
+    font-weight:500;
+    transition:color .2s;
+  }
+  nav a:hover { color:var(--gold); }
 
-  /* ---------- Hero ---------- */
-  .hero{
-    background:linear-gradient(180deg, var(--bg) 0%, var(--bg) 60%, var(--bg) 100%);
-    padding:72px 0 40px;
-    overflow:hidden;
+  /* ========== Hero ========== */
+  .hero {
+    padding:80px 0;
   }
-  .hero .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center; }
-  .hero h1{ font-size:clamp(32px,4.4vw,52px); line-height:1.12; letter-spacing:-0.02em; color:var(--navy-900); margin:18px 0 20px; font-weight:800; }
-  .hero h1 span{ color:var(--teal-500); }
-  .hero p.lead{ font-size:17px; color:var(--muted); max-width:520px; margin-bottom:30px; }
-  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:34px; }
-  .hero .btn-outline.on-light{ border-color:var(--border); background:#fff; }
-  .hero .btn-outline.on-light:hover{ border-color:var(--navy-800); background:var(--navy-800); color:#fff; }
-  .mini-trust{ display:flex; gap:26px; flex-wrap:wrap; }
-  .mini-trust li{ display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700; color:var(--navy-800); }
-  .mini-trust svg{ width:18px; height:18px; color:var(--teal-500); flex-shrink:0; }
-
-  .hero-art{
-    position:relative; aspect-ratio:1/1; border-radius:28px;
-    background:radial-gradient(circle at 30% 20%, var(--navy-700), var(--navy-900) 70%);
+  .hero-inner {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-label {
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:16px;
+    font-weight:700;
+  }
+  .hero h1 {
+    font-size:48px;
+    line-height:1.2;
+    margin-bottom:20px;
+    color:var(--charcoal);
+    font-weight:700;
+  }
+  .hero h1 .accent { color:var(--gold); }
+  .hero p {
+    font-size:16px;
+    color:var(--muted);
+    margin-bottom:28px;
+    line-height:1.7;
+  }
+  .hero-ctas {
+    display:flex;
+    gap:16px;
+    margin-bottom:24px;
+  }
+  .btn {
+    display:inline-block;
+    padding:13px 28px;
+    border-radius:4px;
+    font-weight:600;
+    font-size:14px;
+    transition:all .2s;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .btn-primary {
+    background:var(--gold);
+    color:var(--charcoal);
+  }
+  .btn-primary:hover {
+    background:var(--gold-light);
     box-shadow:var(--shadow);
+  }
+  .btn-outline {
+    background:transparent;
+    color:var(--charcoal);
+    border:1px solid var(--charcoal);
+  }
+  .btn-outline:hover {
+    background:var(--charcoal);
+    color:var(--white);
+  }
+  .hero-disclaimer {
+    font-size:12px;
+    color:var(--muted);
+    font-style:italic;
+  }
+
+  .hero-image {
+    background:linear-gradient(135deg, #f0ebe3, #e8e0d8);
+    border-radius:8px;
+    aspect-ratio:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
     overflow:hidden;
   }
-  .hero-art .hex-grid{ position:absolute; inset:0; opacity:.5; }
-  .float-card{
-    position:absolute; background:#fff; border-radius:16px; padding:16px 18px;
-    box-shadow:0 16px 34px -12px rgba(0,0,0,0.35); display:flex; align-items:center; gap:12px;
+  .hero-badge {
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:var(--gold);
+    color:var(--white);
+    padding:8px 14px;
+    border-radius:4px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
   }
-  .float-card .num{ font-size:22px; font-weight:800; color:var(--navy-900); line-height:1; }
-  .float-card .lbl{ font-size:12px; color:var(--muted); font-weight:600; }
-  .float-card.c1{ top:9%; left:8%; }
-  .float-card.c1 .icon{ background:var(--teal-050); color:var(--teal-500); }
-  .float-card.c2{ bottom:10%; right:8%; }
-  .float-card.c2 .icon{ background:#fdeee0; color:#e08a2b; }
-  .float-card .icon{ width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .float-card .icon svg{ width:20px; height:20px; }
-  .hero-center-badge{
-    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    width:132px; height:132px; border-radius:50%;
-    background:linear-gradient(135deg, var(--teal-500), var(--teal-400));
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 20px 40px -12px rgba(43,191,174,0.55);
+  .hero-image svg {
+    width:200px;
+    height:200px;
+    opacity:.8;
   }
-  .hero-center-badge svg{ width:56px; height:56px; color:var(--navy-900); }
 
-  /* ---------- Trust bar ---------- */
-  .trust-bar{ background:var(--navy-900); padding:34px 0; }
-  .trust-bar .wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
-  .trust-item{ display:flex; align-items:flex-start; gap:14px; }
-  .trust-item .icon{
-    width:46px; height:46px; border-radius:12px; flex-shrink:0;
-    background:rgba(43,191,174,0.15); color:var(--teal-400);
-    display:flex; align-items:center; justify-content:center;
+  /* ========== Range Section ========== */
+  .range {
+    padding:80px 0;
+    background:var(--light-bg);
   }
-  .trust-item .icon svg{ width:24px; height:24px; }
-  .trust-item h3{ color:#fff; font-size:16px; font-weight:700; margin-bottom:4px; }
-  .trust-item p{ color:#9fb0c2; font-size:14px; }
+  .range-content {
+    text-align:center;
+    max-width:700px;
+    margin:0 auto;
+  }
+  .section-label {
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:12px;
+    font-weight:700;
+  }
+  .range h2 {
+    font-size:36px;
+    margin-bottom:16px;
+    color:var(--charcoal);
+    font-weight:700;
+  }
+  .range p {
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:24px;
+  }
+  .trust-badge {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:16px 24px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:4px;
+    font-size:13px;
+    color:var(--text);
+    font-weight:600;
+  }
+  .trust-badge span { color:var(--gold); }
 
-  /* ---------- Stats ---------- */
-  .stats{ padding:64px 0; }
-  .stats .wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
-  .stat-card{
-    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
-    padding:32px 28px; text-align:left; transition:transform .18s ease, box-shadow .18s ease;
+  /* ========== Features Section ========== */
+  .materials {
+    padding:80px 0;
   }
-  .stat-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); }
-  .stat-card .num{ font-size:40px; font-weight:800; color:var(--navy-900); letter-spacing:-0.02em; }
-  .stat-card .num span{ color:var(--teal-500); }
-  .stat-card .lbl{ margin-top:6px; font-size:15px; font-weight:700; color:var(--navy-800); }
-  .stat-card .sub{ margin-top:8px; font-size:14px; color:var(--muted); }
+  .materials-inner {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .materials-text h2 {
+    font-size:36px;
+    margin-bottom:12px;
+    color:var(--charcoal);
+    font-weight:700;
+    line-height:1.2;
+  }
+  .materials-text .accent { color:var(--gold); }
+  .materials-text p {
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:16px;
+  }
+  .materials-list {
+    margin-bottom:28px;
+  }
+  .materials-list li {
+    font-size:14px;
+    color:var(--text);
+    margin-bottom:10px;
+    display:flex;
+    gap:8px;
+  }
+  .materials-list li::before {
+    content:"✦";
+    color:var(--gold);
+    font-weight:700;
+  }
+  .materials-link {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:var(--charcoal);
+    font-weight:600;
+    font-size:14px;
+    transition:color .2s;
+  }
+  .materials-link:hover { color:var(--gold); }
+  .materials-link::after {
+    content:"→";
+  }
 
-  /* ---------- Content / evaluate section ---------- */
-  .evaluate{ padding:20px 0 80px; }
-  .evaluate .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-  .evaluate h2{ font-size:clamp(26px,3vw,34px); color:var(--navy-900); font-weight:800; letter-spacing:-0.01em; margin:14px 0 18px; line-height:1.2; }
-  .evaluate p{ color:var(--muted); font-size:16px; margin-bottom:16px; }
-  .checklist-card{
-    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
-    padding:30px; box-shadow:var(--shadow);
+  .materials-image {
+    background:linear-gradient(135deg, #e8dfd6, #f0ebe3);
+    border-radius:8px;
+    aspect-ratio:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
-  .checklist-card h3{ font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:700; margin-bottom:18px; }
-  .checklist-card li{ display:flex; gap:14px; padding:14px 0; border-top:1px solid var(--border); }
-  .checklist-card li:first-of-type{ border-top:none; }
-  .checklist-card .icon{
-    width:30px; height:30px; border-radius:8px; background:var(--teal-050); color:var(--teal-500);
-    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  .materials-image svg {
+    width:180px;
+    height:180px;
+    opacity:.7;
   }
-  .checklist-card .icon svg{ width:16px; height:16px; }
-  .checklist-card strong{ display:block; font-size:15px; color:var(--navy-900); margin-bottom:2px; }
-  .checklist-card span{ font-size:13.5px; color:var(--muted); }
 
-  /* ---------- Articles ---------- */
-  .articles{ padding:0 0 90px; }
-  .articles-head{ display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px; gap:20px; flex-wrap:wrap; }
-  .articles-head h2{ font-size:clamp(26px,3vw,34px); color:var(--navy-900); font-weight:800; letter-spacing:-0.01em; margin-top:14px; }
-  .view-all{ display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--navy-800); font-size:14px; padding-bottom:6px; }
-  .view-all svg{ width:16px; height:16px; transition:transform .15s ease; }
-  .view-all:hover svg{ transform:translateX(4px); }
-  .article-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
-  .article-card{
-    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
-    overflow:hidden; display:flex; flex-direction:column; transition:transform .18s ease, box-shadow .18s ease;
+  /* ========== Why Choose Us ========== */
+  .why {
+    padding:80px 0;
+    background:var(--light-bg);
   }
-  .article-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
-  .article-thumb{
-    height:150px; background:linear-gradient(135deg, var(--navy-800), var(--navy-900));
-    position:relative; display:flex; align-items:center; justify-content:center;
+  .why-header {
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 56px;
   }
-  .article-thumb svg{ width:44px; height:44px; color:var(--teal-400); opacity:.9; }
-  .article-thumb::after{
-    content:""; position:absolute; inset:0;
-    background-image:radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
-    background-size:16px 16px;
+  .why h2 {
+    font-size:36px;
+    margin-bottom:12px;
+    color:var(--charcoal);
+    font-weight:700;
   }
-  .article-body{ padding:24px 24px 26px; display:flex; flex-direction:column; gap:10px; flex:1; }
-  .article-tag{ font-size:11px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--teal-500); }
-  .article-card h3{ font-size:18px; font-weight:700; color:var(--navy-900); line-height:1.35; }
-  .article-card p{ font-size:14px; color:var(--muted); flex:1; }
-  .read-link{ display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:700; color:var(--navy-800); margin-top:6px; }
-  .read-link svg{ width:15px; height:15px; transition:transform .15s ease; }
-  .article-card:hover .read-link svg{ transform:translateX(4px); }
+  .why-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+  }
+  .why-card {
+    background:var(--white);
+    padding:32px;
+    border-radius:4px;
+    border:1px solid var(--border);
+  }
+  .why-card h3 {
+    font-size:18px;
+    color:var(--charcoal);
+    margin-bottom:12px;
+    font-weight:700;
+  }
+  .why-card p {
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.7;
+  }
 
-  /* ---------- CTA banner ---------- */
-  .cta-banner{
-    background:linear-gradient(120deg, var(--navy-900), var(--navy-700));
-    border-radius:var(--radius-lg);
-    margin:0 24px 90px;
-    padding:56px 40px;
-    display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
-    position:relative; overflow:hidden;
+  /* ========== About Section ========== */
+  .about {
+    padding:80px 0;
   }
-  .cta-banner::before{
-    content:""; position:absolute; width:340px; height:340px; border-radius:50%;
-    background:radial-gradient(circle, rgba(43,191,174,0.35), transparent 70%);
-    top:-140px; right:-80px;
+  .about-inner {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
   }
-  .cta-banner h2{ font-size:clamp(22px,2.6vw,30px); color:#fff; font-weight:800; max-width:520px; position:relative; }
-  .cta-banner p{ color:#a9bbcc; margin-top:8px; font-size:15px; position:relative; }
-  .cta-banner .btn{ position:relative; }
+  .about-text h2 {
+    font-size:36px;
+    margin-bottom:20px;
+    color:var(--charcoal);
+    font-weight:700;
+    line-height:1.2;
+  }
+  .about-text p {
+    font-size:15px;
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:16px;
+  }
+  .about-list {
+    margin:28px 0 32px;
+  }
+  .about-list li {
+    font-size:14px;
+    color:var(--text);
+    margin-bottom:10px;
+    display:flex;
+    gap:8px;
+  }
+  .about-list li::before {
+    content:"✦";
+    color:var(--gold);
+    flex-shrink:0;
+  }
+  .about-link {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:var(--charcoal);
+    font-weight:600;
+    font-size:14px;
+    transition:color .2s;
+  }
+  .about-link:hover { color:var(--gold); }
+  .about-link::after {
+    content:"→";
+  }
 
-  /* ---------- Footer ---------- */
-  footer{ background:var(--navy-900); padding:60px 0 26px; }
-  .footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.1); }
-  .footer-brand .brand{ color:#fff; margin-bottom:14px; }
-  .footer-brand p{ color:#8ea0b3; font-size:14px; max-width:280px; }
-  .footer-col h4{ color:#fff; font-size:14px; font-weight:700; margin-bottom:16px; letter-spacing:.03em; }
-  .footer-col li{ margin-bottom:11px; }
-  .footer-col a{ color:#9fb0c2; font-size:14px; transition:color .15s ease; }
-  .footer-col a:hover{ color:var(--teal-400); }
-  .footer-bottom{ display:flex; align-items:center; justify-content:space-between; padding-top:24px; flex-wrap:wrap; gap:12px; }
-  .footer-bottom p{ color:#6f8299; font-size:12.5px; }
-  .disclaimer{ color:#6f8299; font-size:12px; max-width:640px; }
-
-  @media (max-width: 900px){
-    .hero .wrap{ grid-template-columns:1fr; }
-    .hero-art{ max-width:420px; margin:0 auto; }
-    .trust-bar .wrap{ grid-template-columns:1fr; gap:22px; }
-    .stats .wrap{ grid-template-columns:1fr; }
-    .evaluate .wrap{ grid-template-columns:1fr; }
-    .article-grid{ grid-template-columns:1fr; }
-    .footer-top{ grid-template-columns:1fr 1fr; }
+  .about-image {
+    background:linear-gradient(135deg, #f0ebe3, #e8e0d8);
+    border-radius:8px;
+    aspect-ratio:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
-  @media (max-width: 720px){
-    .nav-links{ display:none; }
-    .menu-btn{ display:block; }
-    .nav-cta .btn:not(.mobile-only){ display:none; }
-    .cta-banner{ flex-direction:column; align-items:flex-start; }
+  .about-image svg {
+    width:180px;
+    height:180px;
+    opacity:.7;
+  }
+
+  /* ========== Trusted Section ========== */
+  .trusted {
+    padding:80px 0;
+    background:linear-gradient(135deg, #3a3a3a, #2a2a2a);
+    color:var(--white);
+  }
+  .trusted-inner {
+    text-align:center;
+  }
+  .trusted h2 {
+    font-size:36px;
+    margin-bottom:12px;
+    font-weight:700;
+  }
+  .trusted p {
+    font-size:15px;
+    color:#ccc;
+    margin-bottom:28px;
+    line-height:1.7;
+  }
+  .trusted-stats {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:40px;
+  }
+  .stat {
+    text-align:center;
+  }
+  .stat-value {
+    font-size:32px;
+    font-weight:700;
+    color:var(--gold);
+    margin-bottom:4px;
+  }
+  .stat-label {
+    font-size:13px;
+    color:#bbb;
+  }
+  .trusted .btn {
+    background:var(--gold);
+    color:var(--charcoal);
+    margin:0 auto;
+  }
+  .trusted .btn:hover {
+    background:var(--gold-light);
+  }
+  .trusted-disclaimer {
+    margin-top:24px;
+    font-size:12px;
+    color:#999;
+    font-style:italic;
+  }
+
+  /* ========== Footer ========== */
+  footer {
+    background:var(--charcoal);
+    color:#bbb;
+    padding:40px 0 20px;
+    font-size:13px;
+    border-top:1px solid var(--border);
+  }
+  footer p { margin-bottom:8px; }
+
+  /* ========== Mobile ========== */
+  @media (max-width: 900px) {
+    .wrap { padding:0 24px; }
+    .hero-inner,
+    .materials-inner,
+    .about-inner { grid-template-columns:1fr; }
+    .hero-image,
+    .materials-image,
+    .about-image { aspect-ratio:4/3; }
+    .hero h1 { font-size:36px; }
+    .why-grid { grid-template-columns:1fr; }
+    .trusted-stats { grid-template-columns:1fr; }
+    nav { display:none; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap nav">
-    <div class="brand">
-      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 4 L23 10 V22 L13 28 L3 22 V10 Z" fill="#2bbfae"/>
-        <path d="M27 12 L37 18 V30 L27 36 L17 30 V18 Z" fill="#123253"/>
-      </svg>
-      Biochemi
+  <div class="wrap">
+    <div class="header-inner">
+      <div class="logo">BIOCHEMI</div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#why">Why Us</a>
+        <a href="#about">About</a>
+        <a href="https://www.biochemi.co.uk/pages/contact">Contact</a>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="https://www.biochemi.co.uk/blogs/news">Articles</a>
-      <a href="https://www.biochemi.co.uk/pages/contact">Contact</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="https://www.biochemi.co.uk/pages/contact" class="btn btn-outline on-light">Contact Us</a>
-      <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-primary">View Products</a>
-    </div>
-    <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section class="hero" id="top">
+<section class="hero">
   <div class="wrap">
-    <div>
-      <span class="eyebrow">UK Research Peptide Supplier</span>
-      <h1>Quality-led compounds, sourced with care and supplied with <span>confidence.</span></h1>
-      <p class="lead">Biochemi supplies research-grade peptides with independently verified purity, full batch documentation, and tracked delivery across the UK — every order, every time.</p>
-      <div class="hero-ctas">
-        <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-primary">Explore the Range</a>
+    <div class="hero-inner">
+      <div>
+        <span class="hero-label">UK-based research supplier</span>
+        <h1>Welcome to <span class="accent">Biochemi</span></h1>
+        <p>Biochemi supplies research-grade peptides intended exclusively for laboratory, analytical, and in-vitro research applications.</p>
+        <div class="hero-ctas">
+          <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-primary">View Products</a>
+          <a href="https://www.biochemi.co.uk/pages/contact" class="btn btn-outline">Contact</a>
+        </div>
+        <div class="hero-disclaimer">For laboratory research use only. Not for human or animal consumption.</div>
       </div>
-      <ul class="mini-trust">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 99%+ Purity</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Batch-Tested</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 24hr UK Dispatch</li>
-      </ul>
-    </div>
-
-    <div class="hero-art">
-      <svg class="hex-grid" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#2bbfae" stroke-width="1.2" fill="none" opacity="0.5">
-          <path d="M60 20 L110 48 V104 L60 132 L10 104 V48 Z"/>
-          <path d="M160 20 L210 48 V104 L160 132 L110 104 V48 Z"/>
-          <path d="M60 132 L110 160 V216 L60 244 L10 216 V160 Z"/>
-          <path d="M260 20 L310 48 V104 L260 132 L210 104 V48 Z"/>
-          <path d="M160 132 L210 160 V216 L160 244 L110 216 V160 Z"/>
-          <path d="M60 244 L110 272 V328 L60 356 L10 328 V272 Z"/>
-          <path d="M260 132 L310 160 V216 L260 244 L210 216 V160 Z"/>
-          <path d="M360 48 L390 66 V102 L360 120 L330 102 V66 Z"/>
-        </g>
-      </svg>
-      <div class="hero-center-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 2h6M10 2v6.2a2 2 0 0 1-.4 1.2L5.7 15a3 3 0 0 0 2.4 4.8h7.8a3 3 0 0 0 2.4-4.8l-3.9-5.6a2 2 0 0 1-.4-1.2V2"/>
-          <path d="M7 14h10"/>
+      <div class="hero-image">
+        <div class="hero-badge">Research-Grade</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 2h6M10 2v6.2a2 2 0 0 1-.4 1.2L5.7 15a3 3 0 0 0 2.4 4.8h7.8a3 3 0 0 0 2.4-4.8l-3.9-5.6a2 2 0 0 1-.4-1.2V2"/><path d="M7 14h10"/>
         </svg>
       </div>
-      <div class="float-card c1">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <div><div class="num">99%+</div><div class="lbl">Purity Verified</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="range" id="products">
+  <div class="wrap">
+    <div class="range-content">
+      <span class="section-label">Our Range</span>
+      <h2>We Take Pride in Our Work</h2>
+      <p>Every product in our catalogue is formulated for precision, consistency, and research-grade reliability — backed by rigorous quality control at every stage.</p>
+      <div class="trust-badge">
+        <span>✦ UK-BASED • RESEARCH-FOCUSED ✦</span>
       </div>
-      <div class="float-card c2">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5z"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="17.5" cy="19" r="1.5"/></svg></div>
-        <div><div class="num">24hr</div><div class="lbl">UK Dispatch</div></div>
-      </div>
     </div>
   </div>
 </section>
 
-<section class="trust-bar" id="trust">
+<section class="materials">
   <div class="wrap">
-    <div class="trust-item">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5z"/></svg></div>
-      <div><h3>Research Grade</h3><p>Every compound manufactured to research-grade specification.</p></div>
-    </div>
-    <div class="trust-item">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
-      <div><h3>Certificate of Analysis</h3><p>Independent lab analysis provided for each and every batch.</p></div>
-    </div>
-    <div class="trust-item">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="11" rx="1"/><path d="M16 10h3l3 3v4h-6z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg></div>
-      <div><h3>Fast UK Delivery</h3><p>Tracked 24-hour shipping on all orders, dispatched from the UK.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="stats">
-  <div class="wrap">
-    <div class="stat-card">
-      <div class="num"><span>99%+</span></div>
-      <div class="lbl">Purity guaranteed</div>
-      <div class="sub">Lab analysis carried out on every batch before it reaches you.</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">100%</div>
-      <div class="lbl">Batches lab-tested</div>
-      <div class="sub">No compound ships without a matching Certificate of Analysis.</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">24hr</div>
-      <div class="lbl">Tracked UK shipping</div>
-      <div class="sub">Fast, trackable dispatch on every order placed within the UK.</div>
-    </div>
-  </div>
-</section>
-
-<section class="evaluate" id="evaluate">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">Buyer's Guide</span>
-      <h2>How to evaluate research-grade peptide suppliers in the UK</h2>
-      <p>If you're searching for research-grade peptides for sale, the real question isn't who has stock — it's who can prove quality at batch level, fulfil quickly from within the UK, and provide the documentation serious buyers expect before placing an order.</p>
-      <p>That's the standard we hold ourselves to on every batch we release: verified purity, transparent testing, and dispatch you can actually track.</p>
-    </div>
-    <div class="checklist-card">
-      <h3>What Serious Buyers Check First</h3>
-      <ul>
-        <li>
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <div><strong>Batch-level testing</strong><span>Not just a spec sheet — results tied to the exact batch you receive.</span></div>
-        </li>
-        <li>
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <div><strong>Certificates of Analysis</strong><span>Independent lab documentation provided before you buy.</span></div>
-        </li>
-        <li>
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <div><strong>UK-based fast fulfilment</strong><span>Tracked, 24-hour dispatch — no waiting on customs.</span></div>
-        </li>
-        <li>
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <div><strong>Consistency, batch after batch</strong><span>The same purity and documentation standard, every time.</span></div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="articles" id="articles">
-  <div class="wrap">
-    <div class="articles-head">
-      <div>
-        <span class="eyebrow">From the Journal</span>
-        <h2>Featured Articles</h2>
-      </div>
-      <a href="https://www.biochemi.co.uk/blogs/news" class="view-all">View All
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-    <div class="article-grid">
-      <article class="article-card">
-        <div class="article-thumb">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        </div>
-        <div class="article-body">
-          <span class="article-tag">Quality</span>
-          <h3>Best Peptide Quality Indicators to Check</h3>
-          <p>Batch testing, CoAs, purity data, storage controls and supplier consistency — the indicators that matter most for safer research buying.</p>
-          <a href="https://www.biochemi.co.uk/blogs/news" class="read-link">Read article
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-        </div>
-        <div class="article-body">
-          <span class="article-tag">Buyer's Guide</span>
-          <h3>Best Place to Buy Research Grade Peptides</h3>
-          <p>Find the best place to buy research-grade peptides in the UK by comparing purity, batch testing, Certificates of Analysis and delivery speed.</p>
-          <a href="https://www.biochemi.co.uk/blogs/news" class="read-link">Read article
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-      <article class="article-card">
-        <div class="article-thumb">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="11" rx="1"/><path d="M16 10h3l3 3v4h-6z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
-        </div>
-        <div class="article-body">
-          <span class="article-tag">UK Supply</span>
-          <h3>Research Grade Peptides for Sale in the UK</h3>
-          <p>Research-grade peptides for sale in the UK should offer verified purity, batch testing and fast delivery. Here's what serious buyers check first.</p>
-          <a href="https://www.biochemi.co.uk/blogs/news" class="read-link">Read article
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="cta-banner">
-  <div>
-    <h2>Ready to see the difference quality-led sourcing makes?</h2>
-    <p>Browse the range or request a Certificate of Analysis before you order.</p>
-  </div>
-  <a href="https://www.biochemi.co.uk/collections/all" class="btn btn-primary">Explore the Range</a>
-</section>
-
-<footer id="contact">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="brand">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 4 L23 10 V22 L13 28 L3 22 V10 Z" fill="#2bbfae"/>
-            <path d="M27 12 L37 18 V30 L27 36 L17 30 V18 Z" fill="#4fd6c4"/>
-          </svg>
-          Biochemi
-        </div>
-        <p>Quality-led research compounds, sourced with care and supplied with confidence from the UK.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="https://www.biochemi.co.uk/collections/all">Products</a></li>
-          <li><a href="https://www.biochemi.co.uk/blogs/news">Articles</a></li>
+    <div class="materials-inner">
+      <div class="materials-text">
+        <h2>Research-Grade Peptides For <span class="accent">Serious Scientists</span></h2>
+        <p>Biochemi supplies research-grade peptides intended exclusively for laboratory, analytical, and in-vitro research applications. Our catalogue is designed to support academic and commercial research environments alike.</p>
+        <p>All materials made available through this website are supplied strictly for non-clinical research use only and are not intended for human or animal application.</p>
+        <ul class="materials-list">
+          <li>Academic research institutions</li>
+          <li>Commercial analytical workflows</li>
+          <li>Biochemical and experimental studies</li>
         </ul>
+        <a href="https://www.biochemi.co.uk/collections/all" class="materials-link">View Full Product Range</a>
       </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="https://www.biochemi.co.uk/pages/contact">Contact</a></li>
+      <div class="materials-image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18"/><path d="M9 3v18"/><path d="M12 12h.01"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-header">
+      <h2>Why Biochemi?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Research-Grade Quality</h3>
+        <p>Every peptide is formulated for accuracy and consistency. No fillers, no hidden blends — clear, honest composition designed for serious research.</p>
+      </div>
+      <div class="why-card">
+        <h3>Rigorous Quality Control</h3>
+        <p>Each batch undergoes strict internal testing to ensure purity of 99%+. Independently batch-verified so you can trust every order.</p>
+      </div>
+      <div class="why-card">
+        <h3>Fast UK Delivery</h3>
+        <p>Reliable, tracked shipping with same-day dispatch available. Next-day UK delivery so your research is never delayed by supply issues.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>More Than a Decade of <span class="accent">Research Excellence</span></h2>
+        <p>Our catalogue is designed to support the full spectrum of research needs — from early-stage academic investigation through to commercial analytical workflows. We understand what researchers need because we work alongside them every day.</p>
+        <p>All materials made available through this website are supplied strictly for non-clinical research use only and are not intended for human or animal application.</p>
+        <ul class="about-list">
+          <li>Academic and commercial research environments</li>
+          <li>Independent scientific researchers</li>
+          <li>Analytical, biochemical, and experimental study workflows</li>
         </ul>
+        <a href="https://www.biochemi.co.uk/pages/contact" class="about-link">Learn More</a>
+      </div>
+      <div class="about-image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 2h6M10 2v6.2a2 2 0 0 1-.4 1.2L5.7 15a3 3 0 0 0 2.4 4.8h7.8a3 3 0 0 0 2.4-4.8l-3.9-5.6a2 2 0 0 1-.4-1.2V2"/><path d="M7 14h10"/>
+        </svg>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Biochemi. All rights reserved.</p>
-      <p class="disclaimer">For laboratory and research use only. Not for human consumption.</p>
+  </div>
+</section>
+
+<section class="trusted">
+  <div class="wrap">
+    <div class="trusted-inner">
+      <h2>Trusted by Researchers Across the UK</h2>
+      <p>Independently batch-verified. SSL-secured platform. Over 1,000+ satisfied researchers trust Biochemi for their peptide research needs.</p>
+      <div class="trusted-stats">
+        <div class="stat">
+          <div class="stat-value">99%+</div>
+          <div class="stat-label">Batch Purity Verified</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">24hr</div>
+          <div class="stat-label">UK Delivery Available</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">1000+</div>
+          <div class="stat-label">Satisfied Researchers</div>
+        </div>
+      </div>
+      <a href="https://www.biochemi.co.uk/collections/all" class="btn">Enter Our Website</a>
+      <div class="trusted-disclaimer">For laboratory research use only. Not for human or animal consumption.</div>
     </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2024 Biochemi. All rights reserved.</p>
+    <p>Quality-led research peptides, sourced with care and supplied with confidence.</p>
   </div>
 </footer>
-
-<script>
-  document.querySelector('.menu-btn').addEventListener('click', function(){
-    var nav = document.querySelector('.nav-links');
-    var open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
-    nav.style.cssText += open ? '' : 'flex-direction:column; position:absolute; top:68px; left:0; right:0; background:#f5f8fb; padding:20px 24px; border-bottom:1px solid #e3eaf1;';
-  });
-</script>
 
 </body>
 </html>
